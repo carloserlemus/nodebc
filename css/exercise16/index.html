@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Learning CSS</title>
+    <style>
+        ol, ul{
+            padding:0em;
+            margin:0em;
+            margin-top:20px;
+        }
+        ul{
+            list-style:inside;
+        }
+        ol li{
+            list-style-type: square;
+        }
+        ul li{
+            list-style-type:decimal-leading-zero;
+        }
+        ul.decorated li{
+            list-style-image: url(snow.png);
+        }
+
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+    </ul>
+
+    <ol>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+    </ol>
+
+    <ul class="decorated">
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+    </ul>
+  </body>
+</html>
