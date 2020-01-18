@@ -1,0 +1,31 @@
+h1 {
+    color: lightcoral;
+}
+
+#firstp {
+    color: orange;
+}
+
+p {
+    color: greenyellow;
+}
+
+#seconddiv {
+    color: blue;
+}
+
+div {
+    color: yellow;
+}
+
+#thirdlink {
+    color: yellow;
+    text-underline-position: below;
+}
+
+
+a {
+    color: black;
+    text-underline-position: below;
+}
+
