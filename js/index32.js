@@ -18,5 +18,3 @@ let area = height * base;
 
 console.log('The perimeter of a rectangle with a base of %o and a height of %o is equal to %o', base, height, perimeter);
 console.log('The area of a rectangle with base %o and height %o is equal to %o', base, height, area);
-
-
