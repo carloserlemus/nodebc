@@ -8,33 +8,26 @@ For yourself try to explain what's going on?
 
 // null is special, it gets evaluated as an object which is true. How do we convert it to false?
 
-const name = null;
 
-if (name && name !== null){         
+// If name is equal to null
+var name = null;
+
+if (name){                 
     console.log('Your name is %s', name)
-} else{
+} else {
     console.log('Please input a valid name')
 }
 
-/* Explain: Why does name && name !== null work as a condition to falsify?
-    1. name converts to an object which is true.
-    
-    the only way it expresses the first bit of code is if it evaluates as true
-        name is true, but is name !== null? this is false.. therefore it uses the 2nd bit of code.
-    if there were a value such as 'carlos' then name would be true, and name !== null would also be true, which
-    would execute the first bit of code.
+var name = 'carlos';
 
-*/
-
-console.log(typeof name);
-// null is evaluated to false.
-// 
-
-
-/* The else executes because the condition is false.
-if (''){
-    console.log('execute 1')
+if (name){                 
+    console.log('Your name is %s', name)
 } else {
-    console.log('execute 2')
+    console.log('Please input a valid name')
 }
+
+/* 
+    If we enter name where name is equal to null. The 'Else' code runs. Why? because name is evaluated as true in the condition.
+    Null by default is false. Therefore false does not equal true and runs the else code.
+
 */
