@@ -6,7 +6,7 @@ Now assign your name to the name variable and run the code again
 For yourself try to explain what's going on?
 */
 
-// null is special, it gets evaluated as an object which is true. How do we convert it to false?
+// null is special, it gets evaluated as an object which is true.
 
 
 // If name is equal to null
