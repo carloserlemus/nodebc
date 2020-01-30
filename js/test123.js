@@ -1,11 +1,10 @@
-console.log('number: ', 0);
-console.log('number: ', 1);
-console.log('number: ', 2);
-console.log('number: ', 3);
-console.log('number: ', 4);
-console.log('number: ', 5);
-console.log('number: ', 6);
-console.log('number: ', 7);
-console.log('number: ', 8);
-console.log('number: ', 9);
-console.log('number: ', 10);
+let n = 0;
+
+let n1 = 1
+let n2 = 2
+
+while (n < 10){
+    n2 = n1 
+    console.log(n1)
+    n++
+}
