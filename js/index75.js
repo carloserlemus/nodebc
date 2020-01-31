@@ -14,7 +14,7 @@ f1 = f2
 f2 = f
 */
 
-let loopLimiter = 0;
+let loopLimiter = 0; // recursion
 
 let f = 0;
 let f1 = -1;
