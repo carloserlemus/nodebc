@@ -6,25 +6,45 @@
 
     <head>
         <script>
-                  
+            /*
+            Copy and paste the code from the previous exercise
+            Refactor the code to math the new requirements:
+
+
+            Now we need to keep track of how many numbers the user input
+            Once the user doesn't want to add any more numbers show the following message:
+            The final result is: %result%
+            The user input %numbers% numbers
+            The average is: %average% 
+            */
+
             let messageOne = alert('This program adds all the numbers you input');
             let n = [];
 
-            for (i = 0; i <= 4; i++){
+            for (i = 0; i <= 100; i++){
 
                 if (i == 0){
                     n.push(parseInt(prompt('Go ahead and enter your number to add:')));
-                }
-
+                } 
+                            
                 n.push(parseInt(prompt('Another number:')))                
                 alert('The result so far is: ' + (n.reduce(function(x, y){return x + y}, 0)))
+                
+                let m = confirm('Would you like to continue?')     
+
+                if (m == false){
+                    alert('The Final result is: '  + (n.reduce(function(x, y){return x + y}, 0)))
+                    alert('The average is: ' + ((n.reduce(function(x, y){return x + y}, 0)) / n.length))
+                    break
+                }           
+                    
             }
 
         </script>
     </head>
 
     <body>
-        <hr>Index 7</hr>
+        <hr>Index 8</hr>
 
     </body>
 </html>

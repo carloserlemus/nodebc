@@ -1,10 +1,24 @@
-let n = 0;
+const rando = [
+    {
+        name: 'X',
+        price: 100
+    },
+    {
+        name: 'Y',
+        price: 200
+    },
+    {
+        name: 'Z',
+        price: 200
+    },
+    {
+        name: 'N',
+        price: 400
+    }
+]
 
-let n1 = 1
-let n2 = 2
+let randoB = rando.reduce(function(x,y){
+    return x.price + y.price
+})
 
-while (n < 10){
-    n2 = n1 
-    console.log(n1)
-    n++
-}
+console.log(randoB)

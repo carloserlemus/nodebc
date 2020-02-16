@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <title>
+
+    </title>
+
+    <head>
+        <script>
+            /*
+            Create a basic HTML document
+            Create a script tag on the document head element
+            ----------------
+            Ask the user to input the number of seconds that he would like to stay in our site
+            Show how many seconds left he has using console.log()
+            ----------------
+            Once the session is over show the following message:
+            Your session has expired, come again soon!
+            */
+
+            // input a number.
+            let number = parseInt(prompt('How many seconds would you like to stay on this site?'));
+
+            let countDown = function(){
+                if (number > 0){
+                    number--
+                    console.log(number)
+                } else {
+                    alert('Your session has expired!')
+                    clearInterval(id)
+                }
+            }
+
+            let id = setInterval(countDown, 1000)
+
+            // count down from that number.
+            // once number is 0 display a message.
+
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+</html>
