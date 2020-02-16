@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <title>
+
+    </title>
+
+    <head>
+        <script>
+            /*
+            Create a script tag on the document head element
+            Show the user the following message using the alert method:
+            This program adds all the numbers you input
+
+            While the user confirms that he wants to input another number execute the following acctions
+            
+            Using the prompt method ask the user to input a number
+            Add the number
+            Show the partial result with the following message:
+            The result so far is: %result%
+
+            NOTES AND STEPS:
+            prompt() collapses into a string value, we use parseInt to turn it into a workable integer.
+
+            1. I used parseInt to convert the returned string of prompt() into an integer.
+
+            2. I used .push to push that integer into an empty array.
+
+            3. I used reduce() on that array to sum the array as it gets iterated upon by the for loop
+
+            */
+            
+            let messageOne = alert('This program adds all the numbers you input');
+            let n = [];
+
+            for (i = 0; i <= 4; i++){
+
+                if (i == 0){
+                    n.push(parseInt(prompt('Go ahead and enter your number to add:')));
+                }
+
+                n.push(parseInt(prompt('Another number:')))                
+                alert('The result so far is: ' + (n.reduce(function(x, y){return x + y}, 0)))
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <hr>Index 7</hr>
+
+    </body>
+</html>

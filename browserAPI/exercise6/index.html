@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <title>
+
+    </title>
+
+    <head>
+        <script>
+            /*
+            Create a script tag on the document head element
+            Using the confirm method show the user the following method:
+            Would you like the author of this document?
+            If the user confirms the question then we show him the following message
+            The author is %firstname% %lastname%%
+            Else we show the following message:
+            So, So, SOOO, sad.. the author is crying now... thanks
+            */
+            let firstName = 'Carlos';
+            let lastName = 'Rivera-Lemus';
+            let confirmX = window.confirm('Would you like the author of this document?')
+            let author = `The author is ${firstName} ${lastName}`;
+
+
+            if (confirmX === true){
+                window.alert(author)
+            } else {
+                window.alert('So, So, SOOO, sad... the author is crying now... THANKS.')
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <hr>Index 5</hr>
+
+    </body>
+</html>
