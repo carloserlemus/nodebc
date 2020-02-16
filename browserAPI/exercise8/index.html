@@ -6,21 +6,25 @@
 
     <head>
         <script>
+                  
+            let messageOne = alert('This program adds all the numbers you input');
+            let n = [];
 
-            /*
-            Ask the user to input a complete URL
-            Redirect the user to the new location
-            */
+            for (i = 0; i <= 4; i++){
 
-            //As we change the document/window location the
-            //browser will navigate to the new location
-            let input = '';
-            location.href = prompt('Please enter a complete URL:', ('http://' + input));
+                if (i == 0){
+                    n.push(parseInt(prompt('Go ahead and enter your number to add:')));
+                }
+
+                n.push(parseInt(prompt('Another number:')))                
+                alert('The result so far is: ' + (n.reduce(function(x, y){return x + y}, 0)))
+            }
 
         </script>
     </head>
 
     <body>
+        <hr>Index 7</hr>
 
     </body>
 </html>
