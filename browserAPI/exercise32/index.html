@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+        /*
+        `SelecT the element with firstbutton id using getElementById
+        `When the user clicks the button will see an alert message with the following message:
+        `Oh.. Don't Click Me!!
+        `Use the onclick element property
+        Try assigning the function to a variable and then assign the variable to the onclick handler
+        */
+
+        window.onload = function(){
+            let firstButton = document.getElementById('firstbutton');
+            let clickButtonEvent = function(){
+                alert('Don\'t Click Me!!! That\'s HARASSMENT')
+            }
+
+            firstButton.onclick = clickButtonEvent;
+
+        }
+    </script>
+  </head>
+  <body>
+    <div></div>
+    <button id="firstbutton">Click me!!</button>
+  </body>
+</html>
