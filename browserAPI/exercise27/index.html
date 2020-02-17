@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+
+    <script>
+        /*
+        `Select the body element
+        `Define a numbers array with numbers between 1 and 100
+        `Create a ul element
+
+
+        Iterate the numbers array and execute the following task for each item:
+        Create a li element
+        Set the following text: Item %number% as li element content
+        Add color: #ddd as li element style property if it's even number
+        Else add color: #eee as li element style property
+        Insert each list item into the ul element
+        Insert the ul element into the body element
+        */
+        window.onload = function(){
+
+            let numbers = [];
+            for (i = 1; i <= 100; i++){
+            numbers.push(i)
+            }
+            console.log(numbers)
+
+            let ulCreate = document.createElement('ul')
+            console.log(ulCreate)
+            
+            for (i = 0; i < numbers.length; i++){
+
+                let addLi = document.createElement('li')
+                addLi.innerText = `Item ${numbers[i]}`
+                ulCreate.appendChild(addLi)
+                document.body.appendChild(ulCreate)
+
+                if (i % 2 == 1){
+
+                    addLi.style.color = 'red';
+
+                } else{
+
+                    addLi.style.color = 'green'
+
+                }
+            }
+
+
+            
+
+        }
+
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
