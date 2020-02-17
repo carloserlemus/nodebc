@@ -12,8 +12,6 @@
         Use the event x and y properties to get the coordinates and show the message
         */
 
-
-
         window.onload = function(){
             let firstButton = document.getElementById('firstButton');
             let secondButton = document.getElementById('secondButton');
@@ -21,7 +19,7 @@
             let html = document.querySelector('html');
 
             html.addEventListener('click', function(event){
-                console.log(`x-axis: ${event.clientX}, y-axis: ${event.clientY}`)          // Shows the X coordinates.
+                console.log(`x-axis: ${event.clientX}, y-axis: ${event.clientY}`)          // Shows the coordinates.
             })
 
             let greeting = function(){
