@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Elements</title>
+
+  <script>
+      /*
+        `Select the first list item element and add the orange class
+        `Using the selected element select the following element using nextElementSibling and add the orange class
+        `Keep doing this until there's no more siblings
+        `At the end all elements must have the orange class
+        
+        Once you acomplish this task:
+        Now we need to go back using previousElementSibling
+        Add red class to Item 3
+        Add green class to Item 1
+        Final result on the browser must be:
+        <li class="green">Item 1</li>
+        <li class="orange">Item 2</li>
+        <li class="red">Item 3</li>
+        <li class="orange">Item 4</li>
+        <li class="orange">Item 5</li>
+      */
+
+      window.onload = function(){
+        const firstLi = document.querySelector('li');
+        firstLi.classList.add('orange');
+        
+        const secondLi = firstLi.nextElementSibling
+        secondLi.classList.add('orange')
+
+        const thirdLi = secondLi.nextElementSibling
+        thirdLi.classList.add('orange')
+
+        const fourthLi = thirdLi.nextElementSibling
+        fourthLi.classList.add('orange')
+
+        const fifthLi = fourthLi.nextElementSibling
+        fifthLi.classList.add('orange')
+
+        let itemThree = fourthLi.previousElementSibling
+        itemThree.classList.add('red');
+        itemThree.classList.remove('orange')
+
+        let firstItem = secondLi.previousElementSibling
+        firstItem.classList.add('green')
+        firstItem.classList.remove('orange')
+
+        console.log(document.querySelector('ul'))
+        
+      }
+
+
+  </script>
+
+  <style>
+    .red {
+      color: red;
+    }
+    
+    .green {
+      color: green;
+    }
+    
+    .orange {
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+</body>
+</html>
