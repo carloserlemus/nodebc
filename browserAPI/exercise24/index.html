@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Texts</title>
+  <script>
+      /*
+        Select the h1 element and add the following styles using JavaScript:
+        Color: red
+        Font Weight: normal
+        Text Decoration: underline
+        Select the p element and add the following styles using JavaScript:
+        Color: green
+        Font Weight: bold
+        Border: 1px solid black
+      */
+
+      window.onload = function(){
+          const selectH1 = document.querySelector('h1');
+          const selectP = document.querySelector('p');
+          
+          console.log(selectH1.style)
+
+          selectH1.style.color = 'red'
+          selectH1.style.fontWeight = 'normal'
+          selectH1.style.textDecoration = 'underline'
+
+          selectP.style.color = 'green'
+          selectP.style.fontWeight = 'bold'
+          selectP.style.border = '1px solid black'
+
+      }
+
+  </script>
+</head>
+<body>
+  <h1>Main Title</h1>
+  <p>This is a paragraph</p>
+  <ul></ul>
+</body>
+</html>
