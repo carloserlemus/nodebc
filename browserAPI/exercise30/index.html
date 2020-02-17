@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Products</title>
+
+    <script>
+        /*
+        Select the ul element
+        Remove each list item starting from the last item until the first one
+        (first remove milk, then lettuce and so on..)
+        Use a iterator to accomplish this task
+        */
+
+        window.onload = function(){
+            let ul = document.querySelector('ul');
+            let fruits = [];
+
+            for (i = 0; i < 7; i++){                // Pushes each li into fruits array.
+                fruits.push(ul.children.item(i))
+            }
+
+            fruits = fruits.reverse();              // Reverses established fruits array.
+
+            console.log(fruits)                     // Test.
+            
+            for (i = 0; i < 7; i++){
+                ul.removeChild(fruits[i])
+            }
+        }
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li>Bannana</li>
+      <li>Apple</li>
+      <li>Peach</li>
+      <li>Eggs</li>
+      <li>Tomatto</li>
+      <li>Lettuce</li>
+      <li>Milk</li>
+    </ul>
+  </body>
+</html>
