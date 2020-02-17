@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Texts</title>
+  <script>
+      /*
+        -Select the h1 element
+        Define a new variable and store the h1 element content using innerText
+        Select the p element
+        Define a new variable and store the p element content using textContent
+
+
+        Replace the h1 element content for the paragraph one
+        Replace the p element content for the title one
+        Once this code gets executed we get the following result:
+        <h1>This is a paragraph</h1>
+        <p>Main Title</p>
+      */
+      window.onload = function(){
+        const selectH1 = document.querySelector('h1');
+        const h1Content = selectH1.innerText;
+
+        const selectP = document.querySelector('p');
+        const pContent = selectP.textContent;
+
+        console.log(pContent)
+        console.log(h1Content)
+
+        selectH1.innerText = pContent                 // the content of h1 is now equal to the content of p
+        selectP.textContent = h1Content
+
+        console.log(selectP.textContent)              // test-- passed!
+        console.log(selectH1.innerText)
+
+      }
+      
+  </script>
+</head>
+<body>
+  <h1>Main Title</h1>
+  <p>This is a paragraph</p>
+</body>
+</html>
