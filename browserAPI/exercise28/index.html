@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>
+        /*
+        `Create a program that ask the user to input names and show them inside an order list
+        `If the number of items is even the text must be #ddd
+        `If the number of items is odd the text must be #eee
+        `The user must be able to insert all the user names that he wants
+        Each time the user inputs a name we need to show it on the list/document
+        */
+        let ul = document.createElement('ul');
+        let names = []
+        let i = 0
+
+        let createLi = function(){            
+            
+            let userInput = prompt('User input:')
+
+            names.push(userInput)
+
+            let li = document.createElement('li');
+
+            li.innerText = names[i]
+
+            document.body.appendChild(ul)
+            ul.appendChild(li)
+            i++
+
+            if (i % 2 == 0){
+                li.style.color = 'red'
+                li.style.fontWeight = 'bold'
+            } else {
+                li.style.color = 'green'
+                li.style.border = '1px solid black'
+            }
+        }
+
+        window.onload = function(){
+            
+            setInterval(createLi)
+
+
+            /*
+            let createUl = document.createElement('ul');
+            let names = [];
+
+            document.body.appendChild(createUl)
+
+            for (i = 0; i < 100; i++){
+
+                let userInput = prompt('Please enter a name')
+
+                let createLi = document.createElement('li');
+                names.push(userInput)
+
+                createLi.innerText = names[i]
+                createUl.appendChild(createLi)
+
+                if (i % 2 == 0){
+                    createLi.style.color = 'red'
+                } else {
+                    createLi.style.color = 'green'
+                }
+
+                let userConfirm = confirm('Add another name?')
+
+                if (userConfirm == false){
+                    break
+                }
+            }
+            console.log(names)
+            */
+
+
+            //The problem here is that the page doesn't update after ever user input.
+            //it only updates when the loop finishes or meets the conditions to break.
+
+
+
+        }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
