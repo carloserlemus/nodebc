@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+
+    <script>
+        /*
+        Select the body element
+        Create a name array and add 10 names as items
+        Create a ul element
+
+
+        Iterate the name array and execute the following task for each item:
+        Create an li element
+        Set the name value as li element content
+        Insert the li element into the ul element
+        Finally insert the ul element into the body
+        */
+
+        window.onload = function(){
+            const name = ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6', 'item 7', 'item 8', 'item 9', 'item 10'];
+
+            const ulCreate = document.createElement('ul');
+
+            for (i = 0; i < name.length; i++){
+                
+                let addedLi = document.createElement('li');
+                addedLi.innerText = name[i]
+                ulCreate.appendChild(addedLi)
+                document.body.appendChild(ulCreate)
+
+            }
+        }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
