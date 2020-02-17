@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+        /*
+        `Copy and paste the all the code (html and js) from exercise 35
+        `Select the html element using querySelector method
+        `Add a click event handler to the html element using addEventListener
+        When the user clicks on any position we need to show the folloing console message
+        Click possition: x-axis: %xposition%, y-axis: %yposition%
+        Use the event x and y properties to get the coordinates and show the message
+        */
+
+
+
+        window.onload = function(){
+            let firstButton = document.getElementById('firstButton');
+            let secondButton = document.getElementById('secondButton');
+            let link = document.querySelector('a');
+            let html = document.querySelector('html');
+
+            html.addEventListener('click', function(event){
+                console.log(`x-axis: ${event.clientX}, y-axis: ${event.clientY}`)          // Shows the X coordinates.
+            })
+
+            let greeting = function(){
+                alert('You clicked an event listened element.');
+            }
+
+            link.addEventListener('click', function(event){
+                event.preventDefault()
+                alert('This link doesn\'t send us to a different page as we\'re preventing the default behaviour.')
+            })
+
+            firstButton.addEventListener('click', greeting);
+
+            secondButton.onclick = function(){
+                firstButton.removeEventListener('click', greeting)               
+            }
+        }
+    </script>
+  </head>
+  <body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>
