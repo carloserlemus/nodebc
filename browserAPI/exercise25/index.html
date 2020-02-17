@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>
+        /*
+        Select the body element
+        Create a h1 element
+        Add the h1 element the following content:
+        Create Dynamic content!!!
+        Create a paragraph element
+        Add the p element the following content:
+        This elements were created using JavaScript
+        Inster the h1 element into the body element
+        Inster the paragraph element into the body element
+        */
+
+        window.onload = function(){
+            const sBody = document.querySelector('body');
+            console.log(sBody)
+
+            var h1 = document.createElement('h1')
+            var p = document.createElement('p')
+
+            h1.textContent = 'Create Dynamic Content!'
+            p.innerText = 'This element was created using JS'
+
+            document.body.appendChild(h1)
+
+            document.body.appendChild(p)
+
+
+        }
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
