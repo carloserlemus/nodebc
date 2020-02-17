@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+        /*
+        Select the body element and add the keypress event handler
+        When the user press a key we'll show the following message on the console
+        You pressed the %pressedKey% key with the %charCode% code
+        Use event.charCode & String.fromCharCode() to get the key and code
+        */
+
+        window.onload = function(){
+            let body = document.querySelector('body');
+
+            body.addEventListener('keypress', function(event){
+                const keyCode = event.charCode;
+                const key = String.fromCharCode(keyCode);
+
+                console.log(`You pressed ${key} with the ${keyCode} code.`)
+
+            })
+        }
+    </script>
+  </head>
+  <body>
+    <div></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>
