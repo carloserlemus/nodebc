@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+        /*
+        Select the link element and add a onmouseover event handler
+        Change the link style (background color) when the user hovers the link element using JavaScript
+        The background color must be:
+        First time: red
+        Second time: blue
+        Third time: green
+        Fourth time: gray
+        After four times: white
+        Add the link element a onmouseout event handler and show the following alert:
+        The link background color is: %backgroundColor%
+        */
+
+        window.onload = function(){
+            let link = document.querySelector('a');
+
+            link.onmouseover = function(){
+                link.style.backgroundColor = 'red'
+                link.onmouseover = function(){
+                    link.style.backgroundColor = 'blue'
+                    link.onmouseover = function(){
+                        link.style.backgroundColor = 'green'
+                    }
+                }
+            }
+
+            link.onmouseout = function(){
+
+                if (link.style.backgroundColor == 'red'){
+                    alert('The link background color is: red')
+                } else if(link.style.backgroundColor == 'blue'){
+                    alert('The link background color is: blue')
+                } else if(link.style.backgroundColor == 'green'){
+                    alert('The link background color is: green')
+                }
+            }
+        }
+    </script>
+  </head>
+  <body>
+    <div></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>
