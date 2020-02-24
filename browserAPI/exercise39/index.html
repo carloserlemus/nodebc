@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+        /*
+        Select the firstButton id element and add a ondblclick event handler
+        Define a counter numberic variable and set the value to 0
+        Increment the counter variable When the user double clicks the firstButton element
+        Show the counter value using the div element
+        */
+
+        window.onload = function(){
+            let firstButton = document.getElementById('firstButton');
+            let counter = 0;
+            let div = document.querySelector('div')
+
+            firstButton.onclick = function(){
+                counter++
+                div.textContent = counter
+
+            }
+
+            console.log(counter)
+            // Add to the variable on dbl click
+            // Show the value using the div element.
+        }
+    </script>
+  </head>
+  <body>
+    <div></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>
