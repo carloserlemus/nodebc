@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+        /*
+        `Create a style tag
+        `Add a striked class and add the following css properties:
+        `Text decoration: striked
+        `Select all the li elements and change the cursor property and assing pointer as value
+        `Create a script tag on the document head element
+        `Dynamically create a ul element
+        `Define a weeklyChores array and assign 10 chores that you have to do this week
+
+        `Create an li element for each item in the weeklyChores array and assign the chore name
+
+        Add a click event handler to each li element
+        Toggle the striked class when the user clicks the li element
+        Add the li elements to the ul element
+        Add the ul element to the body element
+        At the end you need to see a list of 10 chores that you can click on to show that it's done
+        */
+        window.onload = function(){
+            let ul = document.createElement('ul');
+            let body = document.querySelector('body');
+            let allLi = document.querySelectorAll('li');
+            let children = ul.children;
+
+
+            let weeklyChores = ['Sweep', 'Mop', 'Fix Lights', 'Take out Trash', 'Polish the floors', 'Dishes', 'Laundry', 'Ironing', 'Mow', 'Feed Cat']
+
+
+            body.appendChild(ul)
+
+            function lister(){
+                    for (i = 0; i < weeklyChores.length; i++){
+                    var liItem = document.createElement('li');
+                    var itemName = weeklyChores[i]
+
+                    ul.appendChild(liItem)
+                    liItem.innerText = itemName;
+                }
+
+            }
+
+            lister();
+            
+            for (i = 0; i < weeklyChores.length; i++){
+                children[i].addEventListener('click', function(){
+                children[i].setAttribute('class', 'striked')
+                })
+            }        
+        
+        }
+        
+
+    </script>
+    <style>
+      .striked {
+          text-decoration: line-through;
+      }
+      li {
+          cursor: pointer;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>
