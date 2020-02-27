@@ -25,7 +25,6 @@
             let body = document.querySelector('body');
             let allLi = document.querySelectorAll('li');
             let liArray = [];
-            //setAttribute('class', 'striked')
 
 
             let weeklyChores = ['Sweep', 'Mop', 'Fix Lights', 'Take out Trash', 'Polish the floors', 'Dishes', 'Laundry', 'Ironing', 'Mow', 'Feed Cat']
@@ -35,23 +34,57 @@
 
             function lister(){
                     for (i = 0; i < weeklyChores.length; i++){
-                    const liItem = document.createElement('li');
+                    var liItem = document.createElement('li');
                     var itemName = weeklyChores[i]
-                    liArray.push(liItem)
                     ul.appendChild(liItem)
                     liItem.innerText = itemName;
+                    liArray.push(liItem)
                 }
 
             }
-            lister();
-            console.log(liArray)
 
+            lister();
+
+            ul.children[0].addEventListener('click', function(){
+              ul.children[0].setAttribute('class', 'striked')
+            })
+            ul.children[1].addEventListener('click', function(){
+              ul.children[1].setAttribute('class', 'striked')
+            })
+            ul.children[2].addEventListener('click', function(){
+              ul.children[2].setAttribute('class', 'striked')
+            })
+            ul.children[3].addEventListener('click', function(){
+              ul.children[3].setAttribute('class', 'striked')
+            })
+            ul.children[4].addEventListener('click', function(){
+              ul.children[4].setAttribute('class', 'striked')
+            })
+            ul.children[5].addEventListener('click', function(){
+              ul.children[5].setAttribute('class', 'striked')
+            })
+            ul.children[6].addEventListener('click', function(){
+              ul.children[6].setAttribute('class', 'striked')
+            })
+            ul.children[7].addEventListener('click', function(){
+              ul.children[7].setAttribute('class', 'striked')
+            })
+            ul.children[8].addEventListener('click', function(){
+              ul.children[8].setAttribute('class', 'striked')
+            })
+            ul.children[9].addEventListener('click', function(){
+              ul.children[9].setAttribute('class', 'striked')
+            })
+            
+            /*
             liArray.forEach(function() {
-              addEventListener('click', function(){
-                let item = document.querySelector('li')
-                item.setAttribute('class', 'striked');
+
+              ul.children[0].addEventListener('click', function(){
+                ul.children[0].setAttribute('class', 'striked')
               })
-            });
+            })
+            */
+            
         
         }
         
