@@ -24,7 +24,8 @@
             let ul = document.createElement('ul');
             let body = document.querySelector('body');
             let allLi = document.querySelectorAll('li');
-            let children = ul.children;
+            let liArray = [];
+            //setAttribute('class', 'striked')
 
 
             let weeklyChores = ['Sweep', 'Mop', 'Fix Lights', 'Take out Trash', 'Polish the floors', 'Dishes', 'Laundry', 'Ironing', 'Mow', 'Feed Cat']
@@ -34,22 +35,23 @@
 
             function lister(){
                     for (i = 0; i < weeklyChores.length; i++){
-                    var liItem = document.createElement('li');
+                    const liItem = document.createElement('li');
                     var itemName = weeklyChores[i]
-
+                    liArray.push(liItem)
                     ul.appendChild(liItem)
                     liItem.innerText = itemName;
                 }
 
             }
-
             lister();
-            
-            for (i = 0; i < weeklyChores.length; i++){
-                children[i].addEventListener('click', function(){
-                children[i].setAttribute('class', 'striked')
-                })
-            }        
+            console.log(liArray)
+
+            liArray.forEach(function() {
+              addEventListener('click', function(){
+                let item = document.querySelector('li')
+                item.setAttribute('class', 'striked');
+              })
+            });
         
         }
         
