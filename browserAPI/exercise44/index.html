@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form Properties</title>
+  <script>
+      /*
+        Select the form element using any of the JavaScript selectors
+        Define a variable for each form element
+        Using the form elements property set each variable the right element reference
+
+        Example: define a username variable and assign the first form element using form elements property
+        Set the username to morty
+        Set the password to 12345
+        Add the button a click event handler to show an alert with the username and passord values
+        Change the username and password values using the browser and click the button again to check that it's working
+      */
+
+      window.onload = function(){
+          let form = document.querySelector('form');
+          let username = form.elements[0];
+          let password = form.elements[1];
+          let button = form.elements[2];
+
+          username.value = 'morty'
+          password.value = 12345
+
+          button.addEventListener('click', function(){
+              alert(`Username: ${username.value} and Password: ${password.value}`)
+          })
+
+
+      }
+  </script>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" />
+    <input type="password" id="pass" name="pass" />
+    <button>Show Username and Password</button>
+  </form>
+  <div></div>
+</body>
+</html>
