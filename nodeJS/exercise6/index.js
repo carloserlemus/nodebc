@@ -21,14 +21,9 @@ This code gets executed after the greet function call
 Run the script again to see the new feature
 */
 
-const callback = () => console.log('This code gets executed after the greet function call');
-
-let greet = (x, y, callback) => {
-    let name = x;
-    let nameLast = y;
-    console.log(`Hi ${name} ${nameLast}`)
-    callback()
+let greet = (x, y, z) => {
+    console.log(`Hi ${x} ${y}`)
+    z();
 }
 
-greet('Carlos', 'Lemus', callback)
-
+greet('Carlos', 'Lemus', () => console.log('This code gets executed after the greet function call'));
