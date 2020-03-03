@@ -8,5 +8,8 @@ A function that shows the following message: We're using node modules yeah!!!
 
 let greeter = require('./greeter.js');
 let Greet = greeter('carlos', 'lemus', () => console.log('We\'re using node modules yeah!!!'));
+let test = ''
 
-Greet;
+Greet;                    // Gives the result of the function in greeter.js  
+
+console.log(typeof Greet) // Greet is undefined.
