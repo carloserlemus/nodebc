@@ -1,0 +1,23 @@
+Node.JS Notes:
+
+/Response Handling
+
+The response object
+    ->responses come in different formats.
+        EX. JSON, HTML content... and more!
+JSON (response.json)
+    If we use response.json we can pass an object as a parameter.
+    the .json method will transform it into a JSON.
+    In addition it will add content-type application/json header. (?)
+
+SEND FILE (response.sendFile)
+    We can send any file. However, browsers can read specific file types.
+
+    the tools we need to use .sendFile:
+        path module, _dirname (a variable), and the filename.
+        path.join, 
+
+        path.join brings together _dirname and the filename.
+        where _dirname is the current directory and filename.
+
+
