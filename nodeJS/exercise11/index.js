@@ -19,7 +19,7 @@ app.get('/products', (request, response) => {
 })
 
 app.listen(port, (err) => {
-    if (err){
+    if (err) {
         console.log('Error!')
     } else {
         console.log('Smooth sailing.')

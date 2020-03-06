@@ -20,4 +20,7 @@ SEND FILE (response.sendFile)
         path.join brings together _dirname and the filename.
         where _dirname is the current directory and filename.
 
+        alt shift f -- prettifies your code
+        ctrl k + c -- to block comment
 
+        
