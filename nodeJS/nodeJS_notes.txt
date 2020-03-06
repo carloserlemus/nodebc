@@ -79,6 +79,42 @@ Express has a static method that accepts one string parameter
 
 app.use(express.static('public'));
 
+-------------------------------------------------
+TEMPLATES
+
+Express -> Template Engine (pug).
+    Pug 
+        Very picky about spaces.
+
+How To Activate Pug
+    app.set('view engine', 'pug');
+
+To use pug template from express... we need a 'views' folder
+
+-index.js
+-views
+    -index.pug
+
+INDEX.JS
+    response.render
+        1st Parameter: Template Name
+        2nd P: The second parameter is a JavaScript object
+        where each property will become a template variable
+
+How to use Pug
+
+    mixin support and code blocks?
+
+    template inheritance
+        block and extends keywords.
+        
+
+
+
+
+
+
+
     
 
             
