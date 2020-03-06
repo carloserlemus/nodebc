@@ -22,7 +22,7 @@ app.get('/products', (req, res) => {
 })
 
 app.get('/users', (req, res) => {
-    res.status(500).sendFile(join.path(__dirname, '404.html'))
+    res.status(404).sendFile(path.join(__dirname, '404.html'))
 })
 
 app.listen(port, (err) => {
