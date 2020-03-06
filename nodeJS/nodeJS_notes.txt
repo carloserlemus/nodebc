@@ -20,7 +20,21 @@ SEND FILE (response.sendFile)
         path.join brings together _dirname and the filename.
         where _dirname is the current directory and filename.
 
+
+-------------------------------------------------
+unrelated
         alt shift f -- prettifies your code
         ctrl k + c -- to block comment
+-------------------------------------------------
 
-        
+EXPRESS ROUTER (MODULE)
+    This helps configure the routing in a more organized manner.
+    By grouping them with regard to action or resource type
+
+    It's similar to the way you can point an html file to the .js and .css files.
+
+    express has a method called router which essnetially replaces the app = express()
+
+
+
+    
