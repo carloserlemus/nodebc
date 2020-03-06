@@ -54,6 +54,29 @@ STATUS AND ERROR HANDLING
             console.error(err.stack)
             res.status(500).send('Something broke!')
     })
+-------------------------------------------------
+
+MIDDLEWARE
+    [function] has access to the objects: {request, response}.
+
+    [request and response cycle] [the next function]
+
+    within the req/res cycle the next function can chain middleware calls.
+        What does chaining middleware calls mean?
+    
+    middleware gets three params, the req, res, and the next
+
+    next, function within express router, executes middleware AFTER the current middleware.
+
+    --REQUIRES MORE READING--
+
+-------------------------------------------------
+STATIC CONTENT
+Express has a static method that accepts one string parameter
+
+app.use(express.static('public'));
+
+    
 
             
 
