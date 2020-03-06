@@ -72,6 +72,9 @@ MIDDLEWARE
 
 -------------------------------------------------
 STATIC CONTENT
+
+This helps us create a place to store content that doesn't change much.
+
 Express has a static method that accepts one string parameter
 
 app.use(express.static('public'));
