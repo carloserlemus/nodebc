@@ -33,8 +33,29 @@ EXPRESS ROUTER (MODULE)
 
     It's similar to the way you can point an html file to the .js and .css files.
 
-    express has a method called router which essnetially replaces the app = express()
+    express has a method called router which essentially replaces the app = express()
 
+    The routing process goes: create the custom module using express.router(), export that module,
+    mount the modules in your main .js file (usually index.)
+
+-------------------------------------------------
+STATUS AND ERROR HANDLING
+    the RESPONSE has a METHOD called STATUS(ACCEPTS: NUMBER).
+        STATUS can be chained with send.
+            response.status(404).send('Server Error')
+
+    Can we display a page if the user enters something entirely incorrect? Yes!
+
+    app.use(function (req, res, next) {
+        res.status(404).send("Sorry can't find that!")
+    })
+
+        app.use(function (err, req, res, next) {
+            console.error(err.stack)
+            res.status(500).send('Something broke!')
+    })
+
+            
 
 
     
