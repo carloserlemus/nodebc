@@ -107,7 +107,7 @@ How to use Pug
 
     template inheritance
         block and extends keywords.
-        
+-------------------------------------------------
 
 
 
