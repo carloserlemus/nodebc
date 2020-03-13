@@ -1,21 +1,21 @@
 // Require Mongo from MongoDB module.
 const mongoClient = require('mongodb').MongoClient;
+const express = require('express');
+const app = express();
 
 // MongoDB url to connect to...
 const url = 'mongodb://localhost:27017';
 
+app.get('/', (req, res) => {
+	MongoClient.connect(url, function(err, client) {
+		const db = client.db('comics');
+		const collection = db.collection('superheroes');
 
-//mongoClient has a method that allows us to connect to mongoDB.
-mongoClient.connect(url, (err, client) => {
-    console.log("connected successfully to server");
-    // Use a 'client' object to get the database...
-    const db = client.db('comics');
-    // We can get the collection via collection method.
-    const collection = db.collection('superheroes');
-    
-    collection.find({}).toArray((err, documents) => {
-		console.log(documents);
-		client.close();
+		collection.find({}).toArray((error, documents) => {
+			client.close();
+			res.render('index', { documents: documents });
+		});
 	});
-})
+});
+
 
