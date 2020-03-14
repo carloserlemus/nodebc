@@ -1,0 +1,7 @@
+extends ./layout.pug
+
+block content
+    h1 Superheroes
+    p This site shows superheroes information
+    each n in variables.superheroes
+        img(src='/img/superheroes/' + n.image)
